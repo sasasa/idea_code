@@ -1,0 +1,92 @@
+@charset "utf-8";
+/*==================================================
+　5-2-9 3本線がジャンプして×に
+===================================*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn{
+	position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+	background:#2BA99B;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+	overflow: hidden;/*ジャンプしてはみ出た要素を消す*/
+}
+	
+/*ボタン内側*/
+
+.openbtn .openbtn-area{
+    transition: all .4s;/*アニメーションの設定*/
+}
+
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background: #fff;
+  	width: 45%;
+  }
+
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+
+/*activeクラスが付与されると .openbtn-areaが360度回転し、
+その中の線のtopの位置や形状が変化して×に*/
+
+.openbtn.active .openbtn-area{
+	transform: rotateX(360deg);
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 30%;
+}
+
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+	background:#f3f3f3;
+    padding:20px;
+}
+
+
+a{
+	color: #333;
+	text-decoration: none;
+}
+
+.lead{
+	margin:20px 0 0 0;
+}
+
+

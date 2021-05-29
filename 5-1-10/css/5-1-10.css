@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+/*ナビゲーションの固定*/
+
+nav{
+    /*stickyで固定*/
+    position: -webkit-sticky;/*Safari*/
+	position: sticky;
+    /*固定したい位置*/
+	top: 100px;
+    /*ナビゲーションの形状*/
+    background:#fff;
+	border: 1px solid #eee;
+	box-shadow:0 0 5px #ddd;
+	padding: 20px;
+}
+
+/*レイアウトのためのCSS*/
+#container{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#main-area{
+	width:70%;
+}
+
+#sub-area{
+	width:25%;
+	padding: 0px 20px 0 0;
+}
+
+
+/*768px以下の見え方*/
+
+@media screen and (max-width:768px){
+#main-area{
+	width:100%;
+}
+
+#sub-area{
+	width:100%;
+	padding: 20px;
+}
+
+nav{
+	position:relative;/*stickyからrelativeに戻す*/	
+    top:0;
+}
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+h1{
+	font-size:1.2rem;
+}
+
+h2{
+	font-size:1.2rem;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+
+p{
+	margin-top:20px;	
+}
+
+small{
+	background:#333;
+	color:#fff;
+	display: block;
+	text-align: center;
+	padding:20px;
+}
+
+#header{
+	height: 70px;
+	width:100%;
+	justify-content: space-between;
+	align-items: center;
+	background:#333;
+	color:#fff;
+	text-align: center;
+	padding: 20px;
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav ul li a{
+	display: block;
+	text-decoration: none;
+	color: #666;
+	padding:10px;
+	transition:all 0.3s;
+}
+
+nav ul li.current a,
+nav ul li a:hover,
+nav ul li a:active{
+	color:#888;	
+}
+
+
+section{
+	padding:30px;
+}
+
+section:nth-child(2n){
+	background:#f3f3f3;	
+}

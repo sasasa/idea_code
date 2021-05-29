@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/*==================================================
+共通　横並びのための設定
+===================================*/
+
+.gnavi{
+    display: flex;
+    flex-wrap: wrap;/*スマホ表示折り返し用なのでPCのみなら不要*/
+    margin:0 0 50px 0;
+    list-style: none;
+}
+
+.gnavi li a{
+    display: block;
+    padding:10px 30px;
+    text-decoration: none;
+    color: #333;
+}
+
+.gnavi li{
+    margin-bottom:20px;
+}
+
+/*==================================================
+　5-3-7 上下に線が伸びて背景になる
+===================================*/
+
+.gnavi li a{
+    /*線の基点とするためrelativeを指定*/
+	position: relative;
+    /*はみ出る要素を隠す*/
+	overflow: hidden;
+    /*アニメーションの指定*/
+	transition: all .2s;
+}
+
+/*現在地とhoverの設定*/
+.gnavi li.current a,
+.gnavi li a:hover{
+    /*背景色をつける*/
+    background: #0481A2;
+	color:#fff;
+}
+
+/*背景がつくのアニメーションの開始を0.5秒遅らせる*/
+.gnavi li a:hover{
+	transition-delay: .5s;
+}
+
+/*線の設定*/
+.gnavi li a:before,
+.gnavi li a:after {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    left: 0;
+    /*線の形状*/
+    height: 2px;
+    width:100%;
+    background: #0481A2;
+    /*アニメーションの指定*/
+	transition: all .5s;
+}
+
+/*線の位置と変化*/
+.gnavi li a::before {
+    top: 0;
+	transform: translateX(-100%);/*X方向に-100%移動*/
+}
+.gnavi li a::after {
+    bottom: 0;
+	transform: translateX(100%);/*X方向に100%移動*/
+}
+
+/*hoverした際の線の変化*/
+.gnavi li a:hover::before ,
+.gnavi li a:hover::after {
+	transform: translateX(0);/*X方向に0%移動*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+.lead{
+	padding: 50px 20px;
+}
+
+
+

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>6-1-9 2つの画像の動きを対比させて見せる</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="css/6-1-9.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+
+<div class="slider">
+	<h1>Slide show</h1>
+	<ul class="slider-top">
+		<li class="slider-item slider-item01"></li>
+		<li class="slider-item slider-item02"></li>
+		<li class="slider-item slider-item03"></li>
+	</ul>
+	<ul class="slider-bottom" dir="rtl"><!--/スライダの表示方向を左⇒右に変更するためにdir="rtl"を追加-->
+		<li class="slider-item slider-item04"></li>
+		<li class="slider-item slider-item05"></li>
+		<li class="slider-item slider-item06"></li>
+	</ul>
+<!--/slider--></div>
+
+	
+<div class="container">
+	<p>ここから次のコンテンツスタート<br>使用したライブラリ：<a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p>
+</div>
+	
+<!--/wrapper--></div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/6-1-9.js"></script>
+
+</body>
+</html>

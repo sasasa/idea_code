@@ -1,0 +1,60 @@
+@charset "utf-8";
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background:#333;
+	text-align:center;
+	color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo svg{
+	width:300px;
+}
+
+/*========= SVG操作手書き風にするためのCSS ===============*/
+
+#mask .st0{
+    fill:none;
+    stroke:#fff;
+    stroke-width:90;/*線の太さを指定する*/
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 1500; /* 線の間隔を指定する */
+    stroke-dashoffset:1500; /* 線の位置を指定する */
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+#container{
+    width:100%;
+    height: 100vh;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+a{
+    color: #333;
+}
+
+a:hover{
+     text-decoration: none;   
+}

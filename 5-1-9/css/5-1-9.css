@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/*========= スクロール途中でヘッダーが表示＆非表示するためのCSS ===============*/
+
+#header{
+    /*fixedで上部固定*/
+	position: fixed;
+	height: 70px;
+	width:100%;
+    z-index: 999;/*最前面へ*/
+	/*以下はレイアウトのためのCSS*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background:#333;
+	color:#fff;
+	text-align: center;
+	padding: 20px;
+}
+
+/*　上に上がる動き　*/
+
+#header.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+	transform: translateY(-100px);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#header.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+  	opacity: 0;
+	transform: translateY(-100px);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+h1{
+	font-size:1.2rem;
+}
+
+h2{
+	font-size:1.2rem;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+
+p{
+	margin-top:20px;	
+}
+
+small{
+	background:#333;
+	color:#fff;
+	display: block;
+	text-align: center;
+	padding:20px;
+}
+
+
+nav ul{
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+
+nav ul li a{
+	display: block;
+	text-decoration: none;
+	color: #666;
+	padding:10px;
+	transition:all 0.3s;
+}
+
+nav ul li.current a,
+nav ul li a:hover,
+nav ul li a:active{
+	color:#fff;	
+}
+
+main {
+	    padding-top: 70px;
+}
+section{
+	padding:30px;
+}
+
+section:nth-child(2n){
+	background:#f3f3f3;	
+}
+

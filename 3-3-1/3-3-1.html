@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>3-3-1 「画面が読み込まれた後に動く場合」と「画面がスクロールされたら動く場合」の動くきっかけの指定をまとめる</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/3-3-1.css">
+</head>
+
+<body>
+<div class="wrapper">
+<p>↓　画面が読み込まれたら現れる ↓　</p>
+
+	<div class="box fadeUpTrigger">画面が読み込まれたらふわっ（下から）</div>
+	
+<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓
+<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓スクロールすると出る<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓
+	
+	<div class="box fadeUpTrigger">スクロールしたらふわっ（下から）</div>
+<!--/wrapper--></div>
+	
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="js/3-3-1.js"></script>
+</body>
+</html>

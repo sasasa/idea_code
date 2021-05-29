@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>6-2-6 サムネイルをクリックするとグループ化された画像一覧を表示する</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+<link rel="stylesheet" type="text/css" href="css/6-2-6.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<h1>Gallery</h1>
+	<p>画像拡大に使用したライブラリ：<a href="http://humaan.com/modaal/" target="_blank">http://humaan.com/modaal/</a></p>
+	<ul class="gallery">
+				<li><a href="#gallery-1" class="gallery-list"><img src="img/01.jpg" alt=""></a></li>
+				<li><a href="#gallery-2" class="gallery-list"><img src="img/05.jpg" alt=""></a></li>
+				<li><a href="#gallery-3" class="gallery-list"><img src="img/09.jpg" alt=""></a></li>
+	</ul>
+				
+		<section id="gallery-1" class="hide-area">
+		<p><img src="img/01.jpg" alt=""><span class="caption">画像の説明</span></p>
+		<p><img src="img/02.jpg" alt=""><span class="caption">画像の説明</span></p>
+		<p><img src="img/03.jpg" alt=""><span class="caption">画像の説明</span></p>
+		<p><img src="img/04.jpg" alt=""><span class="caption">画像の説明</span></p>
+		</section>
+
+		<section id="gallery-2" class="hide-area">
+		<p><img src="img/05.jpg" alt=""><span class="caption">画像の説明</span></p>
+		<p><img src="img/06.jpg" alt=""><span class="caption">画像の説明</span></p>
+		<p><img src="img/07.jpg" alt=""><span class="caption">画像の説明</span></p>
+		<p><img src="img/08.jpg" alt=""><span class="caption">画像の説明</span></p>
+		</section>
+			
+		<section id="gallery-3" class="hide-area">
+		<p><img src="img/09.jpg" alt=""><span class="caption">画像の説明</span></p>
+		<p><img src="img/10.jpg" alt=""><span class="caption">画像の説明</span></p>
+		<p><img src="img/11.jpg" alt=""><span class="caption">画像の説明</span></p>
+		<p><img src="img/12.jpg" alt=""><span class="caption">画像の説明</span></p>
+		</section>
+<!--/wrapper--></div>		
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+<script src="js/6-2-6.js"></script>
+</body>
+</html>

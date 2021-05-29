@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/*========= バー表示のためのCSS ===============*/
+
+.scrollgress{
+	z-index: 3;/*他のposition指定しているエリアより前に出すためz-indexの数字を大きく*/
+	top:70px!important;/* fixedで設置しているheaderの高さよりも下にバーを出す*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+h1{
+	font-size:1.2rem;
+}
+
+#container h2{
+	font-size:1.2rem;
+}
+
+#container p{
+	margin-top:20px;	
+}
+
+small{
+	background:#333;
+	color:#fff;
+	display: block;
+	text-align: center;
+	padding:20px;
+}
+
+#header{
+	position: fixed;/*Header固定*/
+	top:0;
+	height: 70px;/*高さ指定*/
+	z-index: 2;
+	width:100%;
+	/*装飾のためのCSS*/
+	background:#333;
+	color:#fff;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#container{
+	position: relative;
+}
+
+section{
+	background:#fff;
+	padding:100px 30px;
+}
+
+section:nth-of-type(2n){
+	color:#fff;
+	text-align: center;
+	padding:300px 30px;
+	min-height: auto;
+}
+
+
+section:nth-of-type(2){
+	background:url("../img/01.jpg") no-repeat center;
+	background-size:cover;
+}
+
+section:nth-of-type(4){
+	background:url("../img/02.jpg") no-repeat center;
+	background-size:cover;
+}
+
+#footer{
+	position: relative;
+	z-index: 2;
+}
+
+/*＝＝＝＝＝＝＝＝＝＝＝タブレット以下の見え方＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+@media screen and (max-width:768px){
+	section{
+	padding:30px;
+}
+
+}

@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/* ボタン共通設定 */
+.btn06{
+    /*矢印の基点とするためrelativeを指定*/
+	position: relative;
+    /*ボタンの形状*/
+	text-decoration: none;
+	display: inline-block;
+	background:#333;
+	color:#fff;
+    padding: 10px 40px 10px 30px;
+	border-radius:25px;
+    text-align: center;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: ease .2s;
+}
+
+.btn06:hover{
+	background:#555;
+}
+
+/* 矢印が回転 */
+
+.btnarrow3::after{
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+	position: absolute;
+    top: 42%;
+    right: 13px;
+    /*矢印の形状*/    
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    /*アニメーションの指定*/    
+    transition: all .3s;
+}
+
+/*hoverした際のアニメーション*/
+.btnarrow3:hover::after{
+  animation: arrowrotate .3s;
+}
+
+@keyframes arrowrotate {
+100% {
+    transform: rotate(360deg);
+  }
+}
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}

@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/*角丸に変わる*/
+
+.btnchangeradius{
+    /*ボタンの形状*/   
+	display:inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+	
+	border: 5px double white;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/   
+    transition:.3s ease-out;
+}
+
+/*hoverした際の角丸のアニメーション*/
+.btnchangeradius:hover{
+	background:#666;
+	border-radius:20px;	
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}

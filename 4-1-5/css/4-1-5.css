@@ -1,0 +1,64 @@
+@charset "utf-8";
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background:#eee;
+	text-align:center;
+	color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo svg{
+    width:300px;
+}
+
+/*=============== SVGアニメーション内の指定 =================*/
+
+/*アニメーション前の指定*/
+#mask path {
+		fill-opacity: 0;/*最初は透過0で見えない状態*/
+		transition: fill-opacity .5s;/*カラーがつく際のアニメーション0.5秒で変化*/
+		fill: none;/*塗りがない状態*/
+		stroke: #333;/*線の色*/
+	}
+
+/*アニメーション後に.doneというクラス名がで付与された時の指定*/
+#mask.done path{
+	  fill: #333;/*塗りの色*/
+	  fill-opacity: 1;/*透過1で見える状態*/
+	  stroke: none;/*線の色なし*/
+	}
+
+/*========= レイアウトのためのCSS ===============*/
+
+#container{
+    width:100%;
+    height: 100vh;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+a{
+    color: #333;
+}
+
+a:hover{
+     text-decoration: none;   
+}

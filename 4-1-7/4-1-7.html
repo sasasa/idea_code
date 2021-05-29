@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>4-1-7 同日2回目のアクセスでローディング画面非表示</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/4-1-7.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div id="splash">
+		<div id="splash_logo">
+			Loading...
+		</div>
+	</div>
+
+	<main>
+        <div id="container">
+		<p>ローディング後、この画面が見えます。<br>サーバーに上げないと、同日2回目以降表示時Loading画面非表示の動作は確認できません。<br>※使用しているライブラリ：<a href="https://github.com/carhartl/jquery-cookie" target="_blank">https://github.com/carhartl/jquery-cookie</a></p>
+        <!--/container--></div>
+	</main>
+<!--==============JQuery読み込み===============-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="js/4-1-7.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>6-2-1 複数の画像を一覧で見せる</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+<link rel="stylesheet" type="text/css" href="css/6-2-1.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+	<h1>Gallery</h1>
+	<p>画像一覧の列調整：CSS</p>
+	<p>画像の出現のくるっとした動き：CSS　× jQuery</p>
+	<p>画像拡大に使用したライブラリ：<a href="https://lokeshdhakar.com/projects/lightbox2/" target="_blank">https://lokeshdhakar.com/projects/lightbox2/</a></p>
+
+	<ul class="gallery">
+		<li><a href="img/01.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/01.jpg" alt=""></a></li>
+		<li><a href="img/02.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/02.jpg" alt=""></a></li>
+		<li><a href="img/03.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/03.jpg" alt=""></a></li>
+		<li><a href="img/04.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/04.jpg" alt=""></a></li>
+		<li><a href="img/05.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/05.jpg" alt=""></a></li>
+		<li><a href="img/06.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/06.jpg" alt=""></a></li>
+		<li><a href="img/07.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/07.jpg" alt=""></a></li>
+		<li><a href="img/08.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/08.jpg" alt=""></a></li>
+		<li><a href="img/09.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/09.jpg" alt=""></a></li>
+		<li><a href="img/10.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/10.jpg" alt=""></a></li>
+		<li><a href="img/11.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/11.jpg" alt=""></a></li>
+		<li><a href="img/12.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/12.jpg" alt=""></a></li>
+		<li><a href="img/13.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/13.jpg" alt=""></a></li>
+		<li><a href="img/14.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/14.jpg" alt=""></a></li>
+		<li><a href="img/15.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/15.jpg" alt=""></a></li>
+		<li><a href="img/16.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/16.jpg" alt=""></a></li>
+		<li><a href="img/17.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="img/17.jpg" alt=""></a></li>
+		<li><a href="img/18.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="img/18.jpg" alt=""></a></li>
+		<li><a href="img/19.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="img/19.jpg" alt=""></a></li>
+		<li><a href="img/20.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="img/20.jpg" alt=""></a></li>
+		<li><a href="img/21.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="img/21.jpg" alt=""></a></li>
+		<li><a href="img/22.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="img/22.jpg" alt=""></a></li>
+		<li><a href="img/23.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="img/23.jpg" alt=""></a></li>
+		<li><a href="img/24.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="img/24.jpg" alt=""></a></li>
+		<li><a href="img/25.jpg" data-lightbox="gallery3" data-title="グループ3キャプション"><img src="img/25.jpg" alt=""></a></li>
+		<li><a href="img/26.jpg" data-lightbox="gallery3" data-title="グループ3キャプション"><img src="img/26.jpg" alt=""></a></li>
+		<li><a href="img/27.jpg" data-lightbox="gallery3" data-title="グループ3キャプション"><img src="img/27.jpg" alt=""></a></li>
+		<li><a href="img/28.jpg" data-lightbox="gallery3" data-title="グループ3キャプション"><img src="img/28.jpg" alt=""></a></li>
+		<li><a href="img/29.jpg" data-lightbox="gallery3" data-title="グループ3キャプション"><img src="img/29.jpg" alt=""></a></li>
+		<li><a href="img/30.jpg" data-lightbox="gallery3" data-title="グループ3キャプション"><img src="img/30.jpg" alt=""></a></li>
+	</ul>
+<!--/wrapper--></div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+<script src="js/6-2-1.js"></script>
+</body>
+</html>

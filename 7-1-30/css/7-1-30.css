@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/*== グラデーションが縮小する */
+
+.gradient2 {
+    /*ボタンの形状*/
+    display: inline-block;
+    color: #fff;
+    
+    padding: 18px 60px;
+    border-radius:30px;
+    text-decoration: none;
+    outline: none;
+    /*背景の色と形状*/
+    background: linear-gradient(to right, #52A0FD 0%, #00e2fa 80%, #00e2fa 100%);
+    box-shadow: 0 15px 15px rgba(82,160,253,0.4);
+    /*アニメーションの指定*/ 
+    transition: all 0.3s ease-out;
+}
+
+/*hoverした際のスケールで全体を縮小*/
+.gradient2:hover{
+    transform: scale(0.95);
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}

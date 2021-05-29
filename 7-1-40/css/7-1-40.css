@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/*きらっと光る*/
+
+.btnshine{
+    /*キラッと光る基点とするためrelativeを指定*/
+	position: relative;
+    /*ボタンの形状*/	
+	display:inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    outline: none;
+    overflow: hidden;
+}
+
+/*キラッと光る*/
+.btnshine::before {
+	content: '';
+    /*絶対配置でキラッと光るの位置を決める*/
+	position: absolute;
+	top: 0;
+	left: -75%;
+    /*キラッと光る形状*/
+    width: 50%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	transform: skewX(-25deg);
+}
+
+/*hoverした際の移動のアニメーション*/
+.btnshine:hover::before {
+	animation: shine 0.7s;
+}
+
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}

@@ -1,0 +1,82 @@
+@charset "utf-8";
+/*==================================================
+　5-2-5 MENUが☓に
+===================================*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn{
+	position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+	background:#666;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+  }
+
+.openbtn span:nth-of-type(1),
+.openbtn span:nth-of-type(3) {
+    height: 2px;
+	background: #fff;
+  	width: 62%;
+    left: 10px;
+ }
+
+.openbtn span:nth-of-type(1) {
+	top:13px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:19px;
+	left:11px;
+	font-size:0.6rem;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:36px;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu表記をしている2つ目の要素が透過して消える*/
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+	background:#f3f3f3;
+    padding:20px;
+}
+
+
+a{
+	color: #333;
+	text-decoration: none;
+}
+
+.lead{
+	margin:20px 0 0 0;
+}

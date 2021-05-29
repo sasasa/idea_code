@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/*==================================================
+共通　横並びのための設定
+===================================*/
+.gnavi{
+    display: flex;
+    flex-wrap: wrap;/*スマホ表示折り返し用なのでPCのみなら不要*/
+    margin:0 0 50px 0;
+    list-style: none;
+}
+
+.gnavi li a{
+    display: block;
+    padding:10px 30px;
+    text-decoration: none;
+    color: #333;
+}
+
+/*==================================================
+　5-3-11 左右から線が伸びて枠線になる
+===================================*/
+
+.gnavi li{
+    /*線の基点とするためrelativeを指定*/
+  position: relative;
+    margin:0 10px;
+}
+
+
+/*線の基点位置*/
+.gnavi li::before,
+.gnavi li::after{
+  content:"";
+    /*絶対配置で線の位置を決める*/
+  position: absolute;
+    /*線の形状*/
+  width: 0;
+  height:2px;
+  background:#0481A2;
+/*アニメーションの指定*/
+  transition: all 0.2s linear;
+  transition-delay: 0.2s;
+}
+
+.gnavi li::before{
+  right: 0;
+  top: 0;
+}
+.gnavi li::after{
+  left: 0;
+  bottom: 0;
+}
+
+/*線の基点位置2 spanタグ*/
+
+.gnavi li span{
+  display: block;
+}
+
+.gnavi li span::before,
+.gnavi li span::after{
+  content:"";
+    /*絶対配置で線の位置を決める*/
+  position: absolute;
+    /*線の形状*/
+  width:2px;
+  height:0;
+  background: #0481A2;
+/*アニメーションの指定*/
+  transition: all 0.2s linear;
+}
+
+.gnavi li span::before{
+  left: 0;
+  top: 0;
+}
+.gnavi li span::after{
+  right: 0;
+  bottom: 0;
+}
+
+/*現在地とhoverした際の線の変化*/
+
+.gnavi li.current::before,
+.gnavi li.current::after,
+.gnavi li:hover::before,
+.gnavi li:hover::after{
+  width: 100%;/*横幅を100%に*/
+}
+
+.gnavi li.current span::before,
+.gnavi li.current span::after,
+.gnavi li:hover span::before,
+.gnavi li:hover span::after{
+  height: 100%;/*縦幅を100%に*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+.lead{
+	padding: 50px 20px;
+}
+
+
+

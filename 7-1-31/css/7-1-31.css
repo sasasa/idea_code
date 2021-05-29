@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/*== グラデーションが拡大する */
+
+.gradient3 {
+    /*ボタンの形状*/
+    display: inline-block;
+    color: #fff;
+    
+    padding: 18px 60px;
+    border-radius:30px;
+    text-decoration: none;
+    outline: none;
+    /*背景色*/
+    background: linear-gradient(to right, #44ea76 0%, #39fad7 80%, #39fad7 100%);
+    /*アニメーションの指定*/ 
+    transition: all 0.3s ease-out;
+}
+
+/*hoverした際のスケールで全体を拡大し影を付ける*/
+.gradient3:hover {
+    transform: scale(1.05);
+    /*ボックスの影*/  
+    box-shadow: 0 15px 15px rgba(57,250,215,0.4);
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}

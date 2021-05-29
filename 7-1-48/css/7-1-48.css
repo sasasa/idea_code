@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/*矢印が縮む*/
+
+.btnarrow6{
+    /*矢印の基点とするためrelativeを指定*/
+	position: relative;
+    /*ボタンの形状*/
+	background:#333;
+    padding: 5px 60px 5px 30px;
+    display: inline-block;
+    text-align: center;
+    transition: all .2s linear;
+	color:#fff;
+    text-decoration: none;
+	border:transparent 2px solid;
+    outline: none;
+}
+
+/*hoverした際のボタンの形状*/
+.btnarrow6:hover{
+	background:#fff;
+	color:#333;
+	border-color:#333;
+}
+
+/*矢印と線の形状*/
+
+.btnarrow6:before{
+	content:"";
+    /*絶対配置で線の位置を決める*/
+	position: absolute;
+	top:50%;
+	right:20px;
+    /*線の形状*/
+	width:20px;
+	height:1px;
+	background:#fff;
+}
+
+.btnarrow6::after {
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+    position: absolute;
+    top: 40%;
+    right: 12px;
+    /*矢印の形状*/
+    border: 4px solid transparent;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-left-color: #fff;
+    /*アニメーションの指定*/
+    transition: all .2s linear;
+}
+
+/*hoverした際の矢印の形状*/
+.btnarrow6:hover::before{
+	background:#333;
+	right:25px;
+}
+
+.btnarrow6:hover::after{
+    border-left-color: #333;
+    right: 20px;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}

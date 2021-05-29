@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/*===モーダル表示のためのcss　*/
+
+.hide-area{/*モーダル表示をする場所をあらかじめ隠す*/
+	display: none;
+}
+
+.modaal-fullscreen .modaal-content-container{/*full画面の色設定*/
+	background: #333;
+	color: #fff;
+	text-align: center;
+}
+
+.modaal-fullscreen .modaal-close{/*ボタンの色、位置*/
+	background:none;
+	right:20px;
+}
+
+/*クローズボタンの×の色変更*/
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+	background:#666;
+}
+
+/*キャプション*/
+.caption{
+    display: block;
+    padding: 10px 0;
+}
+
+/*===　サムネイル表示のためのcss　*/
+
+.gallery{/*ベースになるギャラリーを横並びに*/
+	display: flex;
+    justify-content: space-between;
+}
+
+.gallery li{
+	width:33.333%;
+    padding: 0 10px;
+}
+
+/*画像の横幅を100%にしてレスポンシブ化*/
+img{
+	max-width:100%;
+	height:auto;
+	vertical-align: bottom;/*画像の下にできる余白を削除*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+
+a{
+	color: #333;
+}
+
+a:hover,
+a:active{
+	text-decoration: none;
+}
+
+h1{
+	text-align: center;
+	font-size:6vw;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin:30px 0;
+}
+
+p{
+	margin:0 10px 10px 10px;
+	word-wrap : break-word;
+}

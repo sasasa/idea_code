@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/*--- 線から塗り（共通設定） ---*/
+
+.btn05{
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    display: inline-block;
+    color: #333;
+    
+    padding: 10px 20px;
+    background:#eee;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transition-delay: .7s;/*0.7秒遅れてアニメーション*/
+}
+
+/*hoverした際の、ボタンの背景とテキスト色の変更*/
+.btn05:hover{
+	background:#333;
+	color: #fff;
+}
+
+/*線の設定*/
+.btn05 span{
+    display: block;
+}
+
+/*横線の設定*/
+.btn05::before,
+.btn05::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/   
+    width: 0;
+    height: 1px;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*縦線の設定*/
+.btn05 span::before,
+.btn05 span::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/
+    width:1px;
+    height:0;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*hoverした際、線が縦横100%伸びる*/
+.btn05:hover::before,
+.btn05:hover::after{
+    width: 100%;
+}
+.btn05:hover span::before,
+.btn05:hover span::after{
+    height: 100%;
+}
+
+/*== 左上と右下から枠線が伸びて塗りに */
+
+/*横線が0.2秒送れて出現*/
+
+.bordercircle1::before{
+    right: 0;
+    top: 0;
+    transition-delay: 0.2s;
+}
+.bordercircle1::after{
+    left: 0;
+    bottom: 0;
+    transition-delay: 0.2s;
+}
+
+/*縦線が出現*/
+.bordercircle1 span::before{
+    left: 0;
+    top: 0;
+}
+.bordercircle1 span::after{
+    right: 0;
+    bottom: 0;
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}

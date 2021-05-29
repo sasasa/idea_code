@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+#slider {
+    width: 100%;
+    height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+a{
+	color: #fff;
+}
+
+a:hover,
+a:active{
+	text-decoration: none;
+}
+
+h1{
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size:6vw;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.wrapper{
+	position: relative;
+}
+
+.container{
+	background:#555;
+}
+
+.container p{
+	padding: 300px 0;	
+	text-align: center;
+	color: #fff;
+}
+
+

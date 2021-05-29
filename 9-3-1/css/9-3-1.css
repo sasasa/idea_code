@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/*========= レイアウトのためのCSS ===============*/
+
+p.caption {
+	text-align: center;
+	margin:100px 0;
+	font-size: 1.2rem;
+}
+
+.inner-cap p{
+	font-size:0.8rem;
+}
+
+.btn{
+    display:block;
+    outline: none;
+    background:#333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 50px;
+    margin: 0 auto;
+}
+
+.btn:hover{
+    background: #056AA9;   
+}
+
+
+span{
+	background: linear-gradient(transparent 60%, #ffff66 60%);
+	cursor: pointer;/*カーソルを指マークに変更*/
+}
+
+a{
+	color:#333;
+}
+
+a:hover{
+	text-decoration: none;	
+}

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>9-5-1 数字のカウントアップ・ダウン</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/9-5-1.css">
+</head>
+
+<body>
+
+
+<h1>Count Up Down</h1>
+<p class="lead">使用したライブラリ：<br>・カウントアップダウン<br><a href="https://github.com/LadyBiosphere/animated-counter" target="_blank">https://github.com/LadyBiosphere/animated-counter</a><br>・画面に入ったらカウントアップ・ダウンをスタートするきっかけ<br><a href="https://github.com/protonet/jquery.inview" target="_blank">https://github.com/protonet/jquery.inview</a></p>	
+
+<div id="box1" class="box">
+<p>男性の学生数<br><span class="count-up count-size">2540</span>人</p>
+<p>女性の学生数<br><span class="count-up count-size">2300</span>人</p>
+<!--/box--></div>
+
+		
+<div id="box2" class="box">
+<p>学食充実満足度全国<br>第<span class="count-down count-size">1</span>位</p>
+<!--/box--></div>
+	
+	
+<div id="box3" class="box">
+<p>文系<br><span class="count-up count-size">40</span>%</p>
+<p>理系<br><span class="count-up count-size">60</span>%</p>
+<!--/box--></div>
+	
+<div id="box4" class="box">
+<p>年間の休日<br><span class="count-up count-size">156</span>日</p>
+<!--/box--></div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="js/9-5-1.js"></script>
+</body>
+</html>

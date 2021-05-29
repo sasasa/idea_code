@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/*丸がボタンに変形する*/
+
+.btntransform{
+    /*丸の基点とするためrelativeを指定*/
+	position: relative;
+    /*ボタンの形状*/	
+    display: inline-block;
+	padding:0 0 0 15px;
+	line-height: 50px;
+    color: #333;
+    text-decoration: none;
+    outline: none;
+}
+
+/* 丸が動く */
+.btntransform::before{
+	content:'';
+    /*絶対配置で丸の位置を決める*/
+	position:absolute;
+	left:0;
+	z-index: -1;
+    /*丸の形状*/
+	width:50px;
+	height:50px;
+	background:#ccc;
+	border-radius:25px;
+    /*アニメーションの指定*/
+    transition:.3s ease-out;
+}
+
+/*hoverした際の形状*/
+.btntransform:hover::before{
+	width:212px;
+}
+
+/* 矢印の形状 */
+.btntransform::after{
+	position: absolute;
+    content: '';
+    top: 1.3em;
+    right: -15px;
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg);
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}

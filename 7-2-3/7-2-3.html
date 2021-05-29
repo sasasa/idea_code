@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>7-2-3 虫眼鏡マークをクリックすると下からふわっと検索窓が出現</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/7-2-3.css">
+</head>
+
+<body>
+
+<div class="open-btn"></div>
+	
+<div id="search-wrap">
+	
+<form role="search" method="get" id="searchform" action="">
+<input type="text" value="" name="" id="search-text" placeholder="search">
+<input type="submit" id="searchsubmit" value="">
+</form>
+
+<!--/search-wrap--></div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<script src="js/7-2-3.js"></script>
+</body>
+</html>

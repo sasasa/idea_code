@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/*========= バー表示のためのCSS ===============*/
+
+/*タイムライン全体の設定*/
+.timeline{
+	max-width: 400px;
+	width:100%;
+	margin:50px auto;
+	padding:0 30px;
+}
+
+.timeline li{
+    /*線の起点とするためrelativeを設定*/
+    position: relative;
+	list-style: none;
+	padding:0 0 20px 0;
+}
+
+.timeline dl{
+	margin:0 0 20px 3em;
+}
+
+.timeline dd strong{
+	display: block;
+	padding:10px 0;
+}
+
+/*絶対配置で線を設定*/
+.border-line {
+    /*線の位置*/
+	position: absolute;
+	left:0.2em;
+	top:0;
+	width:2px;/*線の太さ*/
+	height:0;/*はじめは高さを0に*/
+	background: #ccc;
+}
+
+/*タイムラインの見出し横の丸の位置と形状*/
+.timeline li::after{
+	content:'';
+	position: absolute;
+	top:0;
+	left:0;
+	width:10px;
+	height: 10px;
+	background:#666;
+	border-radius: 50%;
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+header{
+	background: #333;
+}
+
+h1{
+	font-size:1.5rem;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 20px;
+	color: #fff;
+}
+
+h2{
+	font-size:1.2rem;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+
+p,ul{
+	margin-top:20px;	
+}
+
+a{
+	color:#333;
+}
+
+small{
+	background:#333;
+	color:#fff;
+	display: block;
+	text-align: center;
+	padding:20px;
+}
+
+
+section{
+	padding:30px;
+}
+section:first-child{
+	padding:30px 30px 0px;
+}
+
+section:nth-child(2n){
+	background:#f3f3f3;	
+}

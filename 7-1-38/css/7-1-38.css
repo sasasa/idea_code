@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/*塗りから線に変わる*/
+.btnchangeline {
+    /*線の基点とするためrelativeを指定*/
+	position:relative;
+    /*ボタンの形状*/  
+	color:#333;
+    padding: 10px 30px;
+	
+	display:inline-block;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/   
+	transition:all 0.3s ease-in-out;
+}
+
+/*線の設定*/
+.btnchangeline::before {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    /*線の形状*/
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    /*はじめは透過0に*/
+    opacity: 0;
+    transform: scale(0, 1);
+    /*アニメーションの指定*/   
+    transition: all 0.3s;
+}
+
+/*背景の設定*/
+.btnchangeline::after {
+    content: '';
+    /*絶対配置で背景の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    /*背景の形状*/
+    width: 100%;
+    height: 100%;
+    background-color:#333;
+    /*アニメーションの指定*/ 
+    transition: all 0.3s;
+}
+
+/*hoverした際の背景と線の形状*/
+.btnchangeline:hover::before {
+    opacity: 1;/*不透明に*/ 
+    transform: scale(1, 1);/*X方向に線を伸ばす*/
+}
+
+.btnchangeline:hover::after {
+    opacity: 0;/*透過0に*/
+    transform: scale(0, 1);/*X方向に背景を縮小*/
+}
+
+/*テキストの設定*/
+.btnchangeline span {
+    /*テキストを前面に出すためz-indexの値を高く設定*/  
+	position: relative;
+	z-index: 2;
+    /*テキストの形状*/
+	color: #fff;
+    /*アニメーションの指定*/   
+    transition: all 0.3s;
+}
+
+/*hoverした際のテキストの形状*/
+.btnchangeline:hover span {
+    letter-spacing: 2px;
+	color: #333;
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}

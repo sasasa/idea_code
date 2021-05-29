@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/*========= レイアウトのためのCSS ===============*/
+
+.wrapper{
+	overflow: hidden;
+}
+
+.flex{
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.box{
+	width: 220px;
+	padding: 20px;
+	margin:0 20px 20px 0;
+	background: #666;
+	color: #fff;
+	box-sizing:border-box;
+	cursor: pointer;
+}
+
+/*==================================================
+ぶわっ、ぽんっ
+===================================*/
+
+/* zoomIn */
+.zoomIn{
+	animation-name: zoomInAnime;
+	animation-duration:0.5s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes zoomInAnime{
+  from {
+	transform: scale(0.6);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+

@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/*========= ヘッダー追従のためのCSS ===============*/
+
+#header{
+	position: fixed;/*追従ナビのためpositionをfixedにする*/
+	top:0;/*ポジション設定topを0*/
+	height: 70px;/*headerの高さを指定*/
+	width:100%;/*position:fixed;にしたため、横幅100%を設定*/
+	background:#333;
+	color:#fff;
+	text-align: center;
+	padding: 20px;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+h1{
+	font-size:1.2rem;
+}
+
+h2{
+	font-size:1.2rem;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+
+p{
+	margin-top:20px;	
+}
+
+small{
+	background:#333;
+	color:#fff;
+	display: block;
+	text-align: center;
+	padding:20px;
+}
+
+#main-vidual{
+	margin-top:70px;/*上部にheader分の高さの余白を持たせる*/
+}
+
+#main-vidual img{
+	width: 100%;
+}
+
+section{
+	padding:30px;
+}
+
+section:nth-child(2n){
+	background:#f3f3f3;	
+}
+
+#page-link{
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+
+#page-link li{
+	list-style: none;
+}
+
+#page-link li a{
+	color: #333;
+	padding:0 20px;
+	text-decoration: none;
+}
+
+#page-link li a::before{
+	content:'▼';
+	font-size:0.8rem;
+	padding:0 10px 0 0;
+	color: #ccc;
+}
+
+#footer{
+	position: relative;
+	z-index: 2;
+}

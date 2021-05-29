@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* ボタン共通設定 */
+.btn03{
+    /*影の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+	text-decoration: none;
+	display: inline-block;
+    text-align: center;
+    background: transparent;
+	border-radius: 25px;
+	border: solid 1px #333;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all 0.2s ease;
+}
+
+/*hoverをした後のボタンの形状*/
+.btn03:hover{
+	border-color:transparent;	
+}
+
+/*ボタンの中のテキスト*/
+.btn03 span {
+	position: relative;
+	z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /*テキストの形状*/
+	display: block;
+    padding: 10px 30px;
+	background:#fff;
+	border-radius: 25px;
+	color:#333;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease;
+}
+
+/*== 7-1-17　左下に押し込まれる（立体が平面に） */
+
+/*影の設定*/
+.pushleft:before {
+    content: "";
+    /*絶対配置で影の位置を決める*/
+    position: absolute;
+	z-index: -1;
+    top: 4px;
+    right: 4px;
+    /*影の形状*/
+    width: 100%;
+    height: 100%;
+	border-radius: 25px;
+    background-color: #333;
+}
+
+/*hoverの際にX軸に-4px・Y軸に4pxずらす*/
+.pushleft:hover span {
+	background-color: #333;
+	color: #fff;
+	transform: translate(-4px, 4px);
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}

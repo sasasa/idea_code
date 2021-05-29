@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>9-3-1 ツールチップ</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/9-3-1.css">
+	<!--ツールチップ出現用のアニメーションを指定するCSS。読み込まなくてもフェードインで出現します。-->
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/tippy.js@5.0.3/animations/shift-toward-subtle.css">
+	<!--ツールチップの色を指定するCSS。読み込まなくても黒色で出現します。-->
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/tippy.js@5.0.3/themes/light-border.css">
+</head>
+
+<body>
+	
+	<p class="caption">文章が続く中で<span class="cap" data-tippy-content="キャプションが入ります。">この文章にカーソルを合わせると</span>ツールチップが出ます</p>
+	
+    <button class="btn cap" data-tippy-content="<div class='inner-cap'><p>続きは会員登録をしたら読むことができます。</p><p>ツールチップにはHTMLも使えます。</p></div>">ボタン</button>
+    	
+	<p class="caption">使用したライブラリ：<a href="https://atomiks.github.io/tippyjs/" target="_blank">https://atomiks.github.io/tippyjs</a></p>
+	
+</body>
+<!--ツールチップを出すためのJS-->
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5"></script>
+<!--ツールチップのJSを制御するためのJS-->
+<script src="js/9-3-1.js"></script>
+</html>

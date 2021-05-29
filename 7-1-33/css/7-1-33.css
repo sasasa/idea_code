@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/*== 外の線が伸びる */
+
+.btnlinestretches{
+    /*線の基点とするためrelativeを指定*/
+	position:relative;
+    /*ボタンの形状*/
+	color:#333;
+	border:1px solid #333;
+    padding: 10px 30px;	
+	display:inline-block;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/
+	transition:all 0.3s ease-in-out;
+}
+
+/*hoverした際の背景の形状*/
+.btnlinestretches:hover{
+	background:#333;
+	color: #fff;
+	border-color:transparent;
+}
+
+/*線の設定*/
+.btnlinestretches::before,
+.btnlinestretches::after {
+	content:'';
+    /*絶対配置で線の位置を決める*/   
+	position:absolute;
+	border:solid #333;
+	width:10px;
+	height:10px;
+    /*アニメーションの指定*/
+	transition:all 0.3s ease-in-out;
+}
+
+/*線の位置と形状*/
+.btnlinestretches::before{
+	top:-6px;
+	left:-6px;
+	border-width:1px 0 0 1px;
+}
+
+/*線の位置と形状*/
+.btnlinestretches::after{
+	bottom:-6px;
+	right:-6px;
+	border-width:0 1px 1px 0;
+}
+
+/*hoverした際の線の形状*/
+.btnlinestretches:hover::before,
+.btnlinestretches:hover::after{
+	width:calc(100% + 11px);
+	height:calc(100% + 11px);
+	border-color:#666;
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}

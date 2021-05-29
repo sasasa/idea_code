@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/*==================================================
+ニュースティッカーのためのcss
+===================================*/
+/*ニュース1行の周りの余白*/
+.slider a{
+    display: block;
+    background:#fff;
+    padding:20px;
+}
+
+/*日付*/
+.slider span {
+    display:inline-block;
+    font-size:0.8rem;
+    margin-right:10px;
+    color:#777;
+}
+
+/*768px以下の見た目*/
+@media screen and (max-width:768px) {
+    .slider {
+        padding:20px;
+        background:#fff;
+    }
+
+    .slider li {
+        border-bottom:1px dashed #ccc;
+    }
+
+    .slider li:last-child {
+        border-bottom:none;
+    }
+    .slider span {
+        display:block;
+		padding-bottom:10px;
+    }
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+body {
+    background:#ddd;
+}
+
+li {
+    list-style-type:none;
+}
+
+.wrapper {
+    width:90%;
+    margin:0 auto;
+}
+
+h1 {
+    text-align:center;
+    padding:20px;
+	font-size: 1.2rem;
+}
+
+a {
+    color:#333;
+    text-decoration:none;
+}
+

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>3-2 CSSアニメーションの基本-CSS アニメーションで動きを指定しよう-</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/3-2.css">
+</head>
+
+<body>
+<div class="wrapper">
+
+<!--アニメーション1回分の時間の長さを指定したい-->
+	<p>アニメーション1回分の時間の長さを指定したい</p>
+<div class="flex">
+	<div class="change-time05 box fadeUp">0.5秒かけて変化</div>
+	<div class="change-time1 box fadeUp">1秒かけて変化</div>
+	<div class="change-time15 box fadeUp">1.5秒かけて変化</div>
+</div>
+	
+<!--アニメーションの開始を遅らせたい-->
+	<p>アニメーションの開始を遅らせたい</p>
+<div class="flex">
+	<div class="delay-time05 box fadeUp">0.5秒後にアニメーション開始</div>
+	<div class="delay-time1 box fadeUp">1秒後にアニメーション開始</div>
+	<div class="delay-time15 box fadeUp">1.5秒後にアニメーション開始</div>
+</div>
+	
+<!--動きをループさせたい-->
+	<p>動きをループさせたい</p>
+<div class="flex">
+	<div class="count2 box fadeUp">動きを2回繰り返す</div>
+	<div class="countinfinite box fadeUp">動きを無限に繰り返す</div>
+</div>
+	
+<!--アニメーションの進行具合を操作したい-->
+	<p>アニメーションの進行具合を操作したい</p>
+<div class="flex">
+	<div class="timing-ease box fadeUp">開始時と終了時が緩やかに変化（ease）</div>
+	<div class="timing-ease-in box fadeUp">開始時は緩やかに変化、終了に近づくと早く変化（ease-in）</div>
+	<div class="timing-ease-out box fadeUp">開始時は早く変化し、終了時は緩やかに変化（ease-out）</div>
+	<div class="timing-ease-in-out box fadeUp">開始時と終了時は、かなり緩やかに変化（ease-in-out）</div>
+	<div class="timing-linear box fadeUp">開始から終了まで一定に変化（linear）</div>
+	<div class="timing-steps box fadeUp">パラパラ漫画のように数値をコマ数で変化（steps）</div>
+	<div class="timing-cubic-bezier box fadeUp">変化の進行割合を3次ベジェ曲線で指定（cubic-bezier）</div>
+</div>
+
+<!--アニメーションをまとめて設定したい-->
+	<p>アニメーションをまとめて設定するデモ</p>
+<div class="box fadeDown">アニメーションをまとめて設定するデモ</div>
+	
+<!--/wrapper--></div>
+	
+</body>
+</html>

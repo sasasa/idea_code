@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+    position:relative;
+	z-index: 1;
+	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+	height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+.slider-top,
+.slider-bottom {
+    height: 50vh;/*スライダー上下の縦幅を画面の高さの半分（50vh）にする*/
+}
+
+/*　背景画像設定　*/
+
+.slider-item01 {
+    background:url(../img/img_01.jpg);
+}
+
+.slider-item02 {
+    background:url(../img/img_02.jpg);
+}
+
+.slider-item03 {
+    background:url(../img/img_03.jpg);
+}
+
+.slider-item04 {
+    background:url(../img/img_04.jpg);
+}
+
+.slider-item05 {
+    background:url(../img/img_05.jpg);
+}
+
+.slider-item06 {
+    background:url(../img/img_06.jpg);
+}
+
+.slider-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height:50vh;/*各スライダーの縦幅を画面の高さの半分（50vh）にする*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+
+a{
+	color: #fff;
+}
+
+a:hover,
+a:active{
+	text-decoration: none;
+}
+
+h1{
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size:6vw;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.container{
+	background:#555;
+}
+
+.container p{
+	padding: 300px 0;	
+	text-align: center;
+	color: #fff;
+}

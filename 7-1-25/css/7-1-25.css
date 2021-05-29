@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/* ボタン共通設定 */
+.btn04 {
+    /*線の基点とするためrelativeを指定*/
+	position: relative;
+    /*ボタンの形状*/
+	display:inline-block;
+    padding: 10px 30px;
+	
+	color:#333;
+	border:1px solid #ccc;
+    text-decoration: none;
+    outline: none;
+    /*はみ出す背景色を隠す*/
+ 	overflow: hidden;
+}
+
+/*hoverした際のボタンの形状*/
+.btn04:hover {
+	color:#ccc;
+	border-color: transparent;
+    /*色の変化を遅らせる*/
+	transition-delay: .6s;
+}
+
+/*線の設定*/
+.btn04 span{
+    display: block;
+    z-index: 2;
+}
+
+/*== 線から塗りに変化（中央から外） */
+
+/*線の設定*/
+.bordercenter span::before,
+.bordercenter span::after{
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    /*線の形状*/
+    width: 100%;
+    height:1px;
+    background: #333;
+    /*アニメーションの設定*/
+	transition: all .3s;
+    transform: scale(0,1);
+    transform-origin: center;
+}
+
+/*上線*/
+.bordercenter span::before {
+    left:0;
+    top:0;
+}
+
+/*下線*/
+.bordercenter span::after {
+    left:0;
+    bottom:0;
+}
+
+/*hoverをすると線が伸びる*/
+.bordercenter:hover span::before,
+.bordercenter:hover span::after{
+    transform: scale(1,1);
+}
+
+/*背景の設定*/
+.bordercenter::before{
+	content: '';
+    /*絶対配置で線の位置を決める*/
+	position: absolute;
+	left: 0;
+    top:0;
+	z-index: -1;
+    /*背景の形状*/
+	height: 100%;
+	width:100%;
+	background:#333;
+    /*アニメーションの設定*/
+	transition: all .3s;
+    transform: scale(0,1);
+    transform-origin: center;
+}
+
+/*hoverをすると背景が伸びる*/
+.bordercenter:hover::before{
+	width: 100%;
+    /*0.4秒遅れてアニメーション*/
+	transition-delay: .4s;
+    transform: scale(1,1);
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}

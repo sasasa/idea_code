@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>2-6-4 無限スクロール（Infinite Scroll）</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/2-6-4.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+	<h1>Infinite Scroll</h1>
+	<p class="lead">無限スクロールに使用したライブラリ：<a href="https://infinite-scroll.com/" target="_blank">https://infinite-scroll.com/</a><br>※サーバーに上げないと、動作確認はできません。</p>	
+
+		<ul class="article-list">
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/01.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>2ページ目最初の記事</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/02.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/03.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/04.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/05.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/06.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/07.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/08.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/09.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/10.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/11.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/12.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/13.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/14.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/15.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/16.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/17.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/18.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/19.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/20.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/21.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/22.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/23.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/24.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/25.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/26.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/27.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/28.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/29.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>タイトルタイトルタイトル</h2>
+			</section>
+		</a></li>
+		<li><a href="#">
+			<figure class="img-block">
+				<img src="img/30.jpg" alt="">
+			</figure>
+			<section class="content-block">	
+				<p class="day">2020.11.04</p>
+				<h2>2ページ目の最後の記事</h2>
+			</section>
+		</a></li>
+	</ul>
+
+<!--/wrapper--></div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.1.0/jquery.infinitescroll.min.js"></script>
+<script src="js/2-6-4.js"></script>
+</body>
+</html>
