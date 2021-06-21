@@ -2,11 +2,11 @@
 	var access = $.cookie('access')
 	if(!access){
 		flag = true;
-		$.cookie('access', false);
+		$.cookie('access', true);
 	}else{
-		flag = false	
+		flag = false
 	}
-	
+
 	//モーダル表示
 	$(".modal-open").modaal({
 	start_open:flag, // ページロード時に表示するか

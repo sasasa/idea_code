@@ -7,13 +7,13 @@
     /*ボタンの形状*/
 	display:inline-block;
     padding: 10px 30px;
-	
+
 	color:#333;
 	border:1px solid #ccc;
     text-decoration: none;
     outline: none;
     /*はみ出す背景色を隠す*/
- 	overflow: hidden;
+    overflow: hidden;
 }
 
 /*hoverした際のボタンの形状*/
@@ -91,7 +91,7 @@
 /*========= レイアウトのためのCSS ===============*/
 
 body{
-    vertical-align:middle; 
+    vertical-align:middle;
     padding: 100px 0;
     text-align: center;
 }

@@ -49,9 +49,10 @@
 /*========= レイアウトのためのCSS ===============*/
 
 body{
-    vertical-align:middle; 
+    vertical-align:middle;
     padding: 100px 0;
     text-align: center;
-}p{
+}
+p{
     margin: 0 0 10px 0;
 }

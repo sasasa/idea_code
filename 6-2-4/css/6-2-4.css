@@ -21,10 +21,10 @@ img{
 /*矢印の設定*/
 
 /*戻る、次へ矢印の位置*/
-.slick-prev, 
+.slick-prev,
 .slick-next {
     position: absolute;/*絶対配置にする*/
-	z-index: 3;
+		z-index: 3;
     top: 42%;
     cursor: pointer;/*マウスカーソルを指マークに*/
     outline: none;/*クリックをしたら出てくる枠線を消す*/

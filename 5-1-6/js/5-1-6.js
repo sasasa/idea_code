@@ -8,12 +8,12 @@ function FixedAnime() {
 			$('#header').removeClass('UpMove');//#headerについているUpMoveというクラス名を除く
 			$('#header').addClass('DownMove');//#headerについているDownMoveというクラス名を付与
 
-		}else{
-			if($('#header').hasClass('DownMove')){//すでに#headerにDownMoveというクラス名がついていたら
-				$('#header').removeClass('DownMove');//DownMoveというクラス名を除き
-				$('#header').addClass('UpMove');//UpnMoveというクラス名を付与
-			}
+	} else {
+		if($('#header').hasClass('DownMove')){//すでに#headerにDownMoveというクラス名がついていたら
+			$('#header').removeClass('DownMove');//DownMoveというクラス名を除き
+			$('#header').addClass('UpMove');//UpnMoveというクラス名を付与
 		}
+	}
 }
 
 //ナビゲーションをクリックした際のスムーススクロール

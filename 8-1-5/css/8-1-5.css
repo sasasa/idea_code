@@ -13,7 +13,7 @@
 	height: 60px;
 	color: #fff;
 	text-align: center;
-	text-transform: uppercase; 
+	text-transform: uppercase;
 	text-decoration: none;
 	font-size:0.6rem;
 	transition:all 0.3s;
@@ -26,7 +26,7 @@
 @media screen and (max-width:768px) {
  #page-top a:hover{
 	background:#942D2F;
-}   
+}
 }
 
 /*リンクを右下に固定*/
@@ -86,7 +86,7 @@ h2{
 }
 
 p{
-	margin-top:20px;	
+	margin-top:20px;
 }
 
 small{
@@ -109,7 +109,7 @@ section{
 }
 
 section:nth-child(2n){
-	background:#f3f3f3;	
+	background:#f3f3f3;
 }
 
 #footer{

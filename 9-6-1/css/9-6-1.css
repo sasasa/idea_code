@@ -14,9 +14,17 @@
 }
 
 /*モーダルのボタンの色を変更したい場合*/
-.modaal-close:after, 
+.modaal-close:after,
 .modaal-close:before{
-	background:#ccc;	
+	background:#ccc;
+}
+
+#modaal-close {
+	background-color: transparent;
+}
+
+#modaal-close:hover {
+	background-color: #fff;
 }
 
 .modaal-close:focus:after,
@@ -48,7 +56,7 @@ h2{
 }
 
 p,ul{
-	margin-top:20px;	
+	margin-top:20px;
 }
 
 ul{
@@ -74,7 +82,7 @@ section{
 }
 
 section:nth-child(2n){
-	background:#f3f3f3;	
+	background:#f3f3f3;
 }
 
 img{

@@ -38,15 +38,14 @@
     width: 15px;
     height: 2px;
     background-color: #333;
-    
+    transition: transform 500ms;
 }
 .title::before{
     top:48%;
     left: 15px;
     transform: rotate(0deg);
-    
 }
-.title::after{    
+.title::after{
     top:48%;
     left: 15px;
     transform: rotate(90deg);

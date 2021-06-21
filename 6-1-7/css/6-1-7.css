@@ -28,7 +28,7 @@
 /*矢印の設定*/
 
 /*戻る、次へ矢印の位置*/
-.slick-prev, 
+.slick-prev,
 .slick-next {
     position: absolute;/*絶対配置にする*/
     top: 42%;
