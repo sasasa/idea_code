@@ -7,7 +7,7 @@
 		nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
 		dots: true,//下部ドットナビゲーションの表示
 		responsive: [
-			{
+		{
 			breakpoint: 769,//モニターの横幅が769px以下の見せ方
 			settings: {
 				slidesToShow: 2,//スライドを画面に2枚見せる
